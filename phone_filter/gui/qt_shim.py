@@ -15,7 +15,7 @@ qfluentwidgets 会自动跟随当前已加载的 Qt 绑定。
 try:
     from PyQt6.QtCore import Qt, QThread, QTimer, pyqtSignal
     from PyQt6.QtGui import (
-        QAction, QColor, QFont, QIcon, QPalette, Qt as _QtModule,
+        QAction, QColor, QFont, QIcon, QKeySequence, QPalette, Qt as _QtModule,
     )
 
     class StyleHint:  # noqa: N801 - 与 PySide6 分支保持同样的短名访问方式
@@ -51,7 +51,7 @@ try:
 except ImportError:  # pragma: no cover - 取决于环境安装的绑定
     from PySide6.QtCore import Qt, QThread, QTimer, Signal as pyqtSignal
     from PySide6.QtGui import (
-        QAction, QColor, QFont, QIcon, QPalette, Qt as _QtModule,
+        QAction, QColor, QFont, QIcon, QKeySequence, QPalette, Qt as _QtModule,
     )
 
     class StyleHint:  # noqa: N801
@@ -95,7 +95,7 @@ def emit(signal, *args):
 
 __all__ = [
     "Qt", "QThread", "QTimer", "pyqtSignal", "QAction", "QColor", "QFont", "QIcon",
-    "QPalette", "StyleHint", "_ENUM_SCOPES",
+    "QKeySequence", "QPalette", "StyleHint", "_ENUM_SCOPES",
     "QApplication", "QDialogButtonBox", "QFileDialog", "QFrame", "QGridLayout",
     "QHBoxLayout", "QLabel", "QLineEdit", "QListWidget", "QMainWindow", "QMessageBox",
     "QProgressBar", "QPushButton", "QScrollArea", "QSizePolicy", "QSlider",
