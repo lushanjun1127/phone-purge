@@ -166,7 +166,7 @@ class NumberFilterFluentWindow(QMainWindow):
         self.settings_page = self._build_settings_page()
         pages_host = QWidget()
         page_layout = QVBoxLayout(pages_host)
-        page_layout.setContentsMargins(0)
+        page_layout.setContentsMargins(0, 0, 0, 0)
         for p in (self.classify_page, self.process_page, self.settings_page):
             p.hide()
             page_layout.addWidget(p)
